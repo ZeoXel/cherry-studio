@@ -29,7 +29,7 @@ export class AppService {
     } else if (isLinux) {
       try {
         const autostartDir = path.join(os.homedir(), '.config', 'autostart')
-        const desktopFile = path.join(autostartDir, isDev ? 'cherry-studio-dev.desktop' : 'cherry-studio.desktop')
+        const desktopFile = path.join(autostartDir, isDev ? 'SwiftEZ-dev.desktop' : 'SwiftEZ.desktop')
 
         if (isLaunchOnBoot) {
           // Ensure autostart directory exists

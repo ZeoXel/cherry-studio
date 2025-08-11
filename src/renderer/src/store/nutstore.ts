@@ -15,7 +15,7 @@ export interface NutstoreState {
 
 const initialState: NutstoreState = {
   nutstoreToken: '',
-  nutstorePath: '/cherry-studio',
+  nutstorePath: '/SwiftEZ',
   nutstoreAutoSync: false,
   nutstoreSyncInterval: 0,
   nutstoreSyncState: {

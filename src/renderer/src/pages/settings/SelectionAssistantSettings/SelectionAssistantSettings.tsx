@@ -97,7 +97,7 @@ const SelectionAssistantSettings: FC = () => {
           <Spacer />
           <Button
             type="link"
-            onClick={() => window.api.openWebsite('https://github.com/CherryHQ/cherry-studio/issues/6505')}
+            onClick={() => window.api.openWebsite('https://github.com/CherryHQ/SwiftEZ/issues/6505')}
             style={{ fontSize: 12 }}>
             {'FAQ & ' + t('settings.about.feedback.button')}
           </Button>

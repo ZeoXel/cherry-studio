@@ -1,11 +1,11 @@
 {
-  "name": "CherryStudio",
+  "name": "SwiftEZ",
   "version": "1.5.5",
   "private": true,
   "description": "A powerful AI assistant for producer.",
   "main": "./out/main/index.js",
   "author": "support@cherry-ai.com",
-  "homepage": "https://github.com/CherryHQ/cherry-studio",
+  "homepage": "https://github.com/CherryHQ/SwiftEZ",
   "engines": {
     "node": ">=22.0.0"
   },

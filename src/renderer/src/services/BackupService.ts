@@ -63,7 +63,7 @@ async function deleteWebdavFileWithRetry(fileName: string, webdavConfig: WebDavC
 }
 
 export async function backup(skipBackupFile: boolean) {
-  const filename = `cherry-studio.${dayjs().format('YYYYMMDDHHmm')}.zip`
+  const filename = `SwiftEZ.${dayjs().format('YYYYMMDDHHmm')}.zip`
   const fileContnet = await getBackupData()
   const selectFolder = await window.api.file.selectFolder()
   if (selectFolder) {
@@ -174,7 +174,7 @@ export async function backupToWebdav({
     logger.error('Failed to get device type or hostname:', error as Error)
   }
   const timestamp = dayjs().format('YYYYMMDDHHmmss')
-  const backupFileName = customFileName || `cherry-studio.${timestamp}.${hostname}.${deviceType}.zip`
+  const backupFileName = customFileName || `SwiftEZ.${timestamp}.${hostname}.${deviceType}.zip`
   const finalFileName = backupFileName.endsWith('.zip') ? backupFileName : `${backupFileName}.zip`
   const backupData = await getBackupData()
 
@@ -344,7 +344,7 @@ export async function backupToS3({
     logger.error('Failed to get device type or hostname:', error as Error)
   }
   const timestamp = dayjs().format('YYYYMMDDHHmmss')
-  const backupFileName = customFileName || `cherry-studio.${timestamp}.${hostname}.${deviceType}.zip`
+  const backupFileName = `SwiftEZ.${timestamp}.${hostname}.${deviceType}.zip`
   const finalFileName = backupFileName.endsWith('.zip') ? backupFileName : `${backupFileName}.zip`
   const backupData = await getBackupData()
 
@@ -834,14 +834,14 @@ export async function handleData(data: Record<string, any>) {
       }
     }
 
-    await localStorage.setItem('persist:cherry-studio', data.localStorage['persist:cherry-studio'])
+    await localStorage.setItem('persist:SwiftEZ', data.localStorage['persist:SwiftEZ'])
     window.message.success({ content: i18n.t('message.restore.success'), key: 'restore' })
     setTimeout(() => window.api.reload(), 1000)
     return
   }
 
   if (data.version >= 2) {
-    localStorage.setItem('persist:cherry-studio', data.localStorage['persist:cherry-studio'])
+    localStorage.setItem('persist:SwiftEZ', data.localStorage['persist:SwiftEZ'])
     await restoreDatabase(data.indexedDB)
 
     if (data.version === 3) {
@@ -936,7 +936,7 @@ export async function backupToLocal({
     logger.error('Failed to get device type or hostname:', error as Error)
   }
   const timestamp = dayjs().format('YYYYMMDDHHmmss')
-  const backupFileName = customFileName || `cherry-studio.${timestamp}.${hostname}.${deviceType}.zip`
+  const backupFileName = customFileName || `SwiftEZ.${timestamp}.${hostname}.${deviceType}.zip`
   const finalFileName = backupFileName.endsWith('.zip') ? backupFileName : `${backupFileName}.zip`
   const backupData = await getBackupData()
 
